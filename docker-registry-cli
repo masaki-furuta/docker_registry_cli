@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# $1 = registry end point
+# $2 = command (list or search)
+# $3 = term ('all' if list command or search term)
+# $4 = blank for insecure registry, or if ssl, add 'ssl'
+
+# Usage example 1: docker-registry-cli workstation.lab.example.com:5000 list all ssl
+# Usage example 2: docker-registry-cli workstation.lab.example.com:5000 search rhel7 ssl
+
+python /usr/local/docker-registry-clie/browser.py $1 $2 $3 $4
